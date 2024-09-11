@@ -1,11 +1,11 @@
 import renderMovies from './renderMovies.js';
 const d = document;
 const inicioinfo = d.getElementById('inicioInfo');
-const backendURL = process.env.REACT_APP_BACKEND_URL;
+
 
 export default async function exploreMovies (){
     try {
-     const response = await axios.get(`${backendURL}/movies`);
+     const response = await axios.get(`${config.backendURL}/movies`);
      const dataMovies = response.data;
      inicioinfo.innerHTML = '';
      renderMovies(dataMovies);
