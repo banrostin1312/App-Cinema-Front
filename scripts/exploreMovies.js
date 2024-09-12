@@ -5,7 +5,7 @@ const inicioinfo = d.getElementById('inicioInfo');
 
 export default async function exploreMovies (){
     try {
-     const response = await axios.get(`${config.backendURL}/movies`);
+     const response = await axios.get(`http://localhost3000/movies`);
      const dataMovies = response.data;
      inicioinfo.innerHTML = '';
      renderMovies(dataMovies);
