@@ -3,14 +3,14 @@ import renderMovies from "./renderMovies.js";
 
 const d = document;
 export default async function performSearchExplore() {
-  const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3000/movies';
+ 
   const searchTerm = searchInput.value;
   console.log(searchTerm);
 
   // Verifica si se proporcionó un término de búsqueda
   if (searchTerm.trim() !== '') {
     try {
-      const response = await axios.get(`${apiUrl}?search=${searchTerm}`);
+      const response = await axios.get(`${config.BACKEND_URL}?search=${searchTerm}`);
       const apiData = response.data;
       renderMovies(apiData);
       searchInput.value = '';
