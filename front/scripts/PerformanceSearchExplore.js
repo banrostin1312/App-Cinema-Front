@@ -3,7 +3,7 @@ import renderMovies from "./renderMovies.js";
 
 const d = document;
 const backURL = window.location.hostname === "localhost" || window.location.hostname === '127.0.0.1' ?
-'http://localhost:3000/movies':'https://app-cinema-back.onrender.com'
+'http://localhost:3000/movies':'https://app-cinema-back.onrender.com/movies'
 
 export default async function performSearchExplore() {
  
