@@ -2,7 +2,7 @@ import renderMovies from "./renderMovies.js";
 // import config from "../config.js";
 
 const d = document;
-const backUrl = window.location.hostname === "localhost" || window.location.hostname === '127.0.0.1' ?
+const backURL = window.location.hostname === "localhost" || window.location.hostname === '127.0.0.1' ?
 'http://localhost:3000/movies':'https://app-cinema-back.onrender.com'
 
 export default async function performSearchExplore() {
@@ -13,7 +13,7 @@ export default async function performSearchExplore() {
   // Verifica si se proporcionó un término de búsqueda
   if (searchTerm.trim() !== '') {
     try {
-      const response = await axios.get(`${backUrl}?search=${searchTerm}`);
+      const response = await axios.get(`${backURL}?search=${searchTerm}`);
       const apiData = response.data;
       renderMovies(apiData);
       searchInput.value = '';
