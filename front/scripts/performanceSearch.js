@@ -5,7 +5,7 @@ const inicioinfo = d.getElementById('inicioInfo');
 export async function performSearch() {
   const searchTerm = searchInput.value;
   const backURL = window.location.hostname === "localhost" || window.location.hostname === '127.0.0.1' ?
-    'http://localhost:3000/movies' : 'https://app-cinema-back.onrender.com'
+    'http://localhost:3000/movies' : 'https://app-cinema-back.onrender.com/movies'
 
   console.log(searchTerm);
 
