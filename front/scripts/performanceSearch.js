@@ -1,5 +1,5 @@
 import renderMovies from "./renderMovies.js";
-import config from "../../config.js"
+import config from "../config.js"
 
 const d = document;
 const inicioinfo = d.getElementById('inicioInfo');

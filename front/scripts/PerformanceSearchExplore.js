@@ -1,5 +1,5 @@
 import renderMovies from "./renderMovies.js";
-
+import config from "../config.js";
 
 const d = document;
 export default async function performSearchExplore() {
